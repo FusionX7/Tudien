@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">3000 từ tiếng anh thông dụng</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dictionary">Nội dung</string>
+    <string name="speech">Phát âm</string>
+</resources>

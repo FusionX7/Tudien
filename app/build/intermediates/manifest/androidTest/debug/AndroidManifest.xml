@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tudienav.laptrinhandroid.nhom7.tudien.test">
+
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+
+    <application>
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+                     android:targetPackage="tudienav.laptrinhandroid.nhom7.tudien"
+                     android:handleProfiling="false"
+                     android:functionalTest="false"
+                     android:label="Tests for tudienav.laptrinhandroid.nhom7.tudien"/>
+</manifest>
