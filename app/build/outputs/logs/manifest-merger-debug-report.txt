@@ -15,11 +15,11 @@ ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml
 application
 ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:5:5-25:19
-MERGED from [com.android.support:design:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.3.0] C:\Users\Hphuo\.android\build-cache\77d5c38fa13e885a162b6411664af978971162fb\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Hphuo\.android\build-cache\0058f2463956a854382a3339c389934b313597ea\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Hphuo\.android\build-cache\6dda91638764af28bef8ba651b8a332f96707d8c\output\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Hphuo\.android\build-cache\609c918c907a189c6717216e2cad1b9261605d38\output\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Hphuo\.android\build-cache\bfb4c78e68c85d9ae6d40e4f8fb41703f8bb100b\output\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
@@ -58,14 +58,14 @@ ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:21:9-24:6
 		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:22:13-47
 uses-sdk
 INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:recyclerview-v7:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.3.0] C:\Users\Hphuo\.android\build-cache\77d5c38fa13e885a162b6411664af978971162fb\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Hphuo\.android\build-cache\0058f2463956a854382a3339c389934b313597ea\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Hphuo\.android\build-cache\6dda91638764af28bef8ba651b8a332f96707d8c\output\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\Hphuo\.android\build-cache\609c918c907a189c6717216e2cad1b9261605d38\output\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:recyclerview-v7:23.3.0] C:\Users\Hphuo\.android\build-cache\8c2417d2652533333148f2c0463e5ae720510276\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Hphuo\.android\build-cache\bfb4c78e68c85d9ae6d40e4f8fb41703f8bb100b\output\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.3.0] G:\Android Projects\Tudien\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Hphuo\.android\build-cache\0058f2463956a854382a3339c389934b313597ea\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml
 		INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml

@@ -44,9 +44,9 @@ public class DbBackend extends DbObject{
         cursor.close();
         return engid;
     }
-    public QuizObject getQuizById(int quizId){
+    public WordObject getQuizById(int quizId){
 
-        QuizObject quizObject = null;
+        WordObject wordObject = null;
         String query = "select * from dictionary where _id = " + quizId;
         Cursor cursor = this.getDbConnection().rawQuery(query, null);
         if(cursor.moveToFirst()){
@@ -55,10 +55,10 @@ public class DbBackend extends DbObject{
                 String kind = cursor.getString(cursor.getColumnIndexOrThrow("kind"));
                 String pronounce = cursor.getString(cursor.getColumnIndexOrThrow("pronounce"));
                 String vie = cursor.getString(cursor.getColumnIndexOrThrow("vi"));
-                quizObject = new QuizObject(eng, kind, pronounce, vie);
+                wordObject = new WordObject(eng, kind, pronounce, vie);
             }while(cursor.moveToNext());
         }
         cursor.close();
-        return quizObject;
+        return wordObject;
     }
 }

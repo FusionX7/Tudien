@@ -37,7 +37,7 @@ public class DictionaryActivity extends AppCompatActivity implements TextToSpeec
         Button textToSpeech = (Button)findViewById(R.id.button);
 
         DbBackend dbBackend = new DbBackend(DictionaryActivity.this);
-        QuizObject allQuizQuestions = dbBackend.getQuizById(id);
+        WordObject allQuizQuestions = dbBackend.getQuizById(id);
 
         word.setText(allQuizQuestions.getEng());
         wordMeaning.setText(allQuizQuestions.getKind());
