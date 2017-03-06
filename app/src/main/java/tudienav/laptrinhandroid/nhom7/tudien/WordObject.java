@@ -9,7 +9,7 @@ public class WordObject {
     private String kind;
     private String pronounce;
     private String vie;
-    private int userCheck;
+    //private int userCheck;
     public WordObject(String eng, String kind, String pronounce, String vie) {
         this.eng = eng;
         this.kind = kind;
@@ -48,11 +48,11 @@ public class WordObject {
         this.vie = vie;
     }
 
-    public int getuserCheck() {
+    /*public int getuserCheck() {
         return userCheck;
     }
 
     public void setUserCheck(int userCheck) {
         this.userCheck = userCheck;
-    }
+    }*/
 }

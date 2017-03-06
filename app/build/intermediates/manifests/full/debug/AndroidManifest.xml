@@ -28,6 +28,11 @@
             android:name="tudienav.laptrinhandroid.nhom7.tudien.DictionaryActivity"
             android:label="@string/title_activity_dictionary"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="tudienav.laptrinhandroid.nhom7.tudien.DictionaryProvider"
+            android:authorities="tudienav.laptrinhandroid.nhom7.tudien"
+            android:exported="false" />
     </application>
 
 </manifest>

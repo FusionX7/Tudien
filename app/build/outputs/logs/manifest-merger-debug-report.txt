@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:3:5-52
 		INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml
 		INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml
 application
-ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:5:5-25:19
+ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:5:5-29:19
 MERGED from [com.android.support:design:23.3.0] C:\Users\Hphuo\.android\build-cache\77d5c38fa13e885a162b6411664af978971162fb\output\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\Hphuo\.android\build-cache\0058f2463956a854382a3339c389934b313597ea\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\Hphuo\.android\build-cache\6dda91638764af28bef8ba651b8a332f96707d8c\output\AndroidManifest.xml:7:5-20
@@ -56,6 +56,14 @@ ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:21:9-24:6
 		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:24:13-56
 	android:name
 		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:22:13-47
+provider#tudienav.laptrinhandroid.nhom7.tudien.DictionaryProvider
+ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:25:9-28:39
+	android:authorities
+		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:26:13-72
+	android:exported
+		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml:27:13-47
 uses-sdk
 INJECTED from G:\Android Projects\Tudien\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:23.3.0] C:\Users\Hphuo\.android\build-cache\77d5c38fa13e885a162b6411664af978971162fb\output\AndroidManifest.xml:20:5-43

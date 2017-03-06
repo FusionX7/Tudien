@@ -1,27 +1,26 @@
 package tudienav.laptrinhandroid.nhom7.tudien;
 
-import android.content.Intent;
+import android.app.LoaderManager;
+import android.content.CursorLoader;
+import android.content.Loader;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import tudienav.laptrinhandroid.nhom7.tudien.DictionaryContract.DictionaryEntry;
+
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private EditText filterText;
-    private ArrayAdapter<String> listAdapter;
+    private WordCursorAdapter wordCursorAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +28,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         filterText = (EditText)findViewById(R.id.editText);
         ListView itemList = (ListView)findViewById(R.id.listView);
+        wordCursorAdapter = new WordCursorAdapter(this,null);
+        itemList.setAdapter(wordCursorAdapter);
+        getLoaderManager().initLoader(0,null,this);
 
-        final DbBackend dbBackend = new DbBackend(MainActivity.this);
-        String[] terms = dbBackend.dictionaryWords();
 
-        listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, terms);
 
-        itemList.setAdapter(listAdapter);
-        itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //final DbBackend dbBackend = new DbBackend(MainActivity.this);
+        //String[] terms = dbBackend.dictionaryWords();
+
+        /*itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String txt = ((TextView)view).getText().toString();
@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("DICTIONARY_ID", engid);
                 startActivity(intent);
             }
-        });
+        });*/
 
-        filterText.addTextChangedListener(new TextWatcher() {
+        /*filterText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
             }
-        });
+        });*/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -96,5 +96,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
+        String[] projection = {
+                DictionaryEntry._ID,
+                DictionaryEntry.COLUMN_EV_EN,
+                DictionaryEntry.COLUMN_EV_VI,
+        };
+        return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,null,null,null);
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
+        wordCursorAdapter.swapCursor(cursor);
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+        wordCursorAdapter.swapCursor(null);
     }
 }

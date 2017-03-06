@@ -10,13 +10,13 @@ import android.provider.BaseColumns;
 
 public final class DictionaryContract {
     private DictionaryContract(){}
-    public static final class DictionaryEntry{
+    public static final class DictionaryEntry implements BaseColumns {
         public final static String TABLE_NAME = "dictionary";
         public final static String _ID = BaseColumns._ID;
-        public final static String COLUMN_EV_EN = "en";
-        public final static String COLUMN_EV_PRONUNCIATION = "pronunciation";
+        public final static String COLUMN_EV_EN = "eng";
+        public final static String COLUMN_EV_PRONUNCIATION = "pronounce";
         public final static String COLUMN_EV_VI= "vi";
-        public final static String COLUMN_EV_CLASSIFIER = "classifier";
+        public final static String COLUMN_EV_CLASSIFIER = "kind";
         public final static String COLUMN_EV_USERCHECK = "usercheck";
 
         public final static int USER_UNCHECKED = 0;
