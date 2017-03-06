@@ -1,17 +1,23 @@
 package tudienav.laptrinhandroid.nhom7.tudien;
 
 import android.app.LoaderManager;
+import android.content.ContentUris;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -21,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private EditText filterText;
     private WordCursorAdapter wordCursorAdapter;
+    Cursor mCursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,37 +41,28 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         itemList.setAdapter(wordCursorAdapter);
         getLoaderManager().initLoader(0,null,this);
 
-
-
-        //final DbBackend dbBackend = new DbBackend(MainActivity.this);
-        //String[] terms = dbBackend.dictionaryWords();
-
-        /*itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String txt = ((TextView)view).getText().toString();
-                int engid=dbBackend.wid(txt);
-
-                // make Toast when click
-                Toast.makeText(getApplicationContext(), "Position " + engid, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, DictionaryActivity.class);
-                intent.putExtra("DICTIONARY_ID", engid);
+                Intent intent = new Intent(MainActivity.this,DictionaryActivity.class);
+                Uri currentUri = ContentUris.withAppendedId(DictionaryEntry.CONTENT_URI,id);
+                intent.setData(currentUri);
                 startActivity(intent);
             }
-        });*/
+        });
 
-        /*filterText.addTextChangedListener(new TextWatcher() {
+        filterText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                MainActivity.this.listAdapter.getFilter().filter(s);
+                getLoaderManager().restartLoader(0,null,MainActivity.this);
             }
             @Override
             public void afterTextChanged(Editable s) {
             }
-        });*/
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -97,14 +95,30 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         return super.onOptionsItemSelected(item);
     }
-
-    @Override
-    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
+    /*private CursorLoader search(String keywords){
+        String[] args = {keywords};
         String[] projection = {
                 DictionaryEntry._ID,
                 DictionaryEntry.COLUMN_EV_EN,
                 DictionaryEntry.COLUMN_EV_VI,
         };
+        return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,DictionaryEntry.COLUMN_EV_EN+"=?",args,null);
+    }*/
+
+    @Override
+    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
+        String keywords;
+        keywords = filterText.getText().toString();
+        String[] projection = {
+                DictionaryEntry._ID,
+                DictionaryEntry.COLUMN_EV_EN,
+                DictionaryEntry.COLUMN_EV_VI,
+        };
+        if (keywords.length()>0){
+            String[] selectArgs={keywords+"%"};
+            return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,DictionaryEntry.COLUMN_EV_EN+" LIKE ?",selectArgs,DictionaryEntry.COLUMN_EV_EN+" ASC");
+        }
+        else
         return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,null,null,null);
     }
 
