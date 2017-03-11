@@ -46,7 +46,7 @@ public class DictionaryProvider extends ContentProvider {
     }
     @Override
     public boolean onCreate() {
-        mDbHelper = new DbObject(getContext());
+        mDbHelper = new DbObject();
         return true;
     }
 
@@ -54,7 +54,7 @@ public class DictionaryProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
                         String sortOrder) {
         // Get readable database
-        SQLiteDatabase database = mDbHelper.getDbConnection();
+        SQLiteDatabase database = mDbHelper.getDbConnection(getContext());
 
         // This cursor will hold the result of the query
         Cursor cursor;
@@ -119,7 +119,8 @@ public class DictionaryProvider extends ContentProvider {
         // TODO: Finish sanity checking the rest of the attributes in ContentValues
 
         // Get writeable database
-        SQLiteDatabase database = mDbHelper.getDbConnection();
+        SQLiteDatabase database = mDbHelper.getDbConnection(getContext()
+        );
 
         // Insert the new pet with the given values
         long id = database.insert(DictionaryEntry.TABLE_NAME, null, values);
@@ -135,41 +136,43 @@ public class DictionaryProvider extends ContentProvider {
         return ContentUris.withAppendedId(uri, id);
     }
     private int updatePet(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
-        /*if (values.size() == 0) {
+        if (values.size() == 0) {
             return 0;
         }
         if (values.containsKey(DictionaryEntry.COLUMN_EV_EN)){
             String name = values.getAsString(DictionaryEntry.COLUMN_EV_EN);
             if (name == null) {
-                throw new IllegalArgumentException("Pet requires a name");
+                throw new IllegalArgumentException("Word is required");
             }
         }
         // If the {@link PetEntry#COLUMN_PET_GENDER} key is present,
         // check that the gender value is valid.
-        if (values.containsKey(DictionaryEntry.COLUMN_PET_GENDER)) {
-            Integer gender = values.getAsInteger(DictionaryEntry.COLUMN_PET_GENDER);
-            if (gender == null || !PDictionaryEntry.isValidGender(gender)) {
-                throw new IllegalArgumentException("Pet requires valid gender");
-            }
-        }
+//        if (values.containsKey(DictionaryEntry.COLUMN_EV_VI
+//        )) {
+//            Integer gender = values.getAsInteger(DictionaryEntry.COLUMN_PET_GENDER);
+//            if (gender == null || !PDictionaryEntry.isValidGender(gender)) {
+//                throw new IllegalArgumentException("Pet requires valid gender");
+//            }
+//        }
 
         // If the {@link PetEntry#COLUMN_PET_WEIGHT} key is present,
         // check that the weight value is valid.
-        if (values.containsKey(DictionaryEntry.COLUMN_PET_WEIGHT)) {
-            // Check that the weight is greater than or equal to 0 kg
-            Integer weight = values.getAsInteger(DictionaryEntry.COLUMN_PET_WEIGHT);
-            if (weight != null && weight < 0) {
-                throw new IllegalArgumentException("Pet requires valid weight");
-            }
+//        if (values.containsKey(DictionaryEntry.COLUMN_PET_WEIGHT)) {
+//            // Check that the weight is greater than or equal to 0 kg
+//            Integer weight = values.getAsInteger(DictionaryEntry.COLUMN_PET_WEIGHT);
+//            if (weight != null && weight < 0) {
+//                throw new IllegalArgumentException("Pet requires valid weight");
+//            }
+//
+//            getContext().getContentResolver().notifyChange(uri,null);
+//        }
 
-            getContext().getContentResolver().notifyChange(uri,null);
-        }
-
-        SQLiteDatabase database = mDbHelper.getDbConnection();
+        SQLiteDatabase database = mDbHelper.getWritableDbConnection(getContext());
         // TODO: Update the selected pets in the pets database table with the given ContentValues
         int id = database.update(DictionaryEntry.TABLE_NAME,values,selection,selectionArgs);
-        // TODO: Return the number of rows that were affected*/
-        return 0;
+        // TODO: Return the number of rows that were affected
+        getContext().getContentResolver().notifyChange(uri,null);
+        return id;
     }
     /**
      * Updates the data at the given selection and selection arguments, with the new ContentValues.
@@ -198,7 +201,7 @@ public class DictionaryProvider extends ContentProvider {
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         // Get writeable database
-        SQLiteDatabase database = mDbHelper.getDbConnection();
+        SQLiteDatabase database = mDbHelper.getWritableDbConnection(getContext());
 
         final int match = sUriMatcher.match(uri);
         switch (match) {

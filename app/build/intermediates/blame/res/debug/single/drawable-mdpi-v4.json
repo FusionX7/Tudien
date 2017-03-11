@@ -88,12 +88,12 @@
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
-    },
-    {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png",

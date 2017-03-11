@@ -17,7 +17,7 @@
         <activity
             android:name="tudienav.laptrinhandroid.nhom7.tudien.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,14 @@
         <activity
             android:name="tudienav.laptrinhandroid.nhom7.tudien.DictionaryActivity"
             android:label="@string/title_activity_dictionary"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName="tudienav.laptrinhandroid.nhom7.tudien.MainActivity"
+            android:theme="@style/AppTheme" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
         <provider
             android:name="tudienav.laptrinhandroid.nhom7.tudien.DictionaryProvider"

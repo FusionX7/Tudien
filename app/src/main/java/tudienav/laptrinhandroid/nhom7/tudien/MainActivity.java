@@ -8,10 +8,7 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -28,15 +25,16 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private EditText filterText;
     private WordCursorAdapter wordCursorAdapter;
     Cursor mCursor;
-
+    boolean learned;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.main);
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
         filterText = (EditText)findViewById(R.id.editText);
         ListView itemList = (ListView)findViewById(R.id.listView);
+        learned =false;
         wordCursorAdapter = new WordCursorAdapter(this,null);
         itemList.setAdapter(wordCursorAdapter);
         getLoaderManager().initLoader(0,null,this);
@@ -64,14 +62,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
     @Override
@@ -90,7 +88,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            if(learned==false)
+            learned=true;
+            else learned = false;
+            getLoaderManager().restartLoader(0,null,MainActivity.this);
+            return learned;
         }
 
         return super.onOptionsItemSelected(item);
@@ -113,11 +115,21 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 DictionaryEntry._ID,
                 DictionaryEntry.COLUMN_EV_EN,
                 DictionaryEntry.COLUMN_EV_VI,
+                DictionaryEntry.COLUMN_EV_USERCHECK
         };
+        if (keywords.length()>0 && learned ){
+            String[] selectArgs={"1",keywords+"%"};
+            return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,DictionaryEntry.COLUMN_EV_USERCHECK + "=?" + "AND " + DictionaryEntry.COLUMN_EV_EN+" LIKE ?",selectArgs,DictionaryEntry.COLUMN_EV_EN+" ASC");
+        }
         if (keywords.length()>0){
             String[] selectArgs={keywords+"%"};
             return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,DictionaryEntry.COLUMN_EV_EN+" LIKE ?",selectArgs,DictionaryEntry.COLUMN_EV_EN+" ASC");
         }
+        if(learned){
+            String[] selectArgs={"1"};
+            return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,DictionaryEntry.COLUMN_EV_USERCHECK+"=?",selectArgs,null);
+        }
+
         else
         return new CursorLoader(this,DictionaryEntry.CONTENT_URI,projection,null,null,null);
     }

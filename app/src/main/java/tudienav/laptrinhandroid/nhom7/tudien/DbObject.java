@@ -11,14 +11,19 @@ public class DbObject {
     private static DictionaryDatabase dbHelper;
     private SQLiteDatabase db;
 
-    public DbObject(Context context) {
-        dbHelper = new DictionaryDatabase(context);
-        this.db = dbHelper.getReadableDatabase();
-    }
+    public DbObject() {}
 
-    public SQLiteDatabase getDbConnection(){
+    public SQLiteDatabase getDbConnection(Context context){
+        dbHelper = new DictionaryDatabase(context);
+        this.db = dbHelper.getWritableDatabase();
         return this.db;
     }
+    public SQLiteDatabase getWritableDbConnection(Context context){
+        dbHelper = new DictionaryDatabase(context);
+        this.db = dbHelper.getWritableDatabase();
+        return this.db;
+    }
+
 
     public void closeDbConnection(){
         if(this.db != null){

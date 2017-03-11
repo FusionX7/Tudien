@@ -1,5 +1,9 @@
 [
     {
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_editor.xml",
+        "source": "G:\\Android Projects\\Tudien\\app\\src\\main\\res\\menu\\menu_editor.xml"
+    },
+    {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "G:\\Android Projects\\Tudien\\app\\src\\main\\res\\menu\\menu_main.xml"
     }
