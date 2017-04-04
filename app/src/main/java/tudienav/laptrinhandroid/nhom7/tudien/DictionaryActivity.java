@@ -60,11 +60,11 @@ public class DictionaryActivity extends AppCompatActivity implements LoaderManag
             }
         });
 
-        Intent checkIntent = new Intent();
-        if (MY_DATA_CHECK_CODE==0){
-            checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
-            startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
-        }
+//        Intent checkIntent = new Intent();
+//        if (MY_DATA_CHECK_CODE==0){
+//            checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+//            startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
+//        }
 
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -95,10 +95,10 @@ public class DictionaryActivity extends AppCompatActivity implements LoaderManag
     }
 
     public void onInit(int status) {
-        /*if (status == TextToSpeech.SUCCESS) {
+        if (status == TextToSpeech.SUCCESS) {
             Toast.makeText(DictionaryActivity.this,
                     "Text-To-Speech engine is initialized", Toast.LENGTH_SHORT).show();
-        }*/
+        }
         if (status == TextToSpeech.ERROR) {
             Toast.makeText(DictionaryActivity.this,
                     "Error occurred while initializing Text-To-Speech engine", Toast.LENGTH_LONG).show();
@@ -138,6 +138,12 @@ public class DictionaryActivity extends AppCompatActivity implements LoaderManag
 
                 return true;
             // Respond to a click on the "Up" arrow button in the app bar
+            case R.id.checktts:
+                MY_DATA_CHECK_CODE=0;
+                Intent checkIntent = new Intent();
+                    checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+                    startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
+                    return true;
             case android.R.id.home:
                 // If the pet hasn't changed, continue with navigating up to parent activity
                 // which is the {@link CatalogActivity}.
