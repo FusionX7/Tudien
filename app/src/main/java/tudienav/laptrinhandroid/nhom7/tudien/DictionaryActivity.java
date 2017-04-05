@@ -76,7 +76,7 @@ public class DictionaryActivity extends AppCompatActivity implements LoaderManag
             }
         });*/
     }
-
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == MY_DATA_CHECK_CODE) {
             if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
@@ -93,7 +93,7 @@ public class DictionaryActivity extends AppCompatActivity implements LoaderManag
         }
 
     }
-
+    @Override
     public void onInit(int status) {
         if (status == TextToSpeech.SUCCESS) {
             Toast.makeText(DictionaryActivity.this,

@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/dictionary"
-    tools:context=".DictionaryActivity">>
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/word"
@@ -12,9 +10,11 @@
         android:layout_width="wrap_content"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?android:textAppearanceMedium"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"/>
 
     <View
@@ -30,13 +30,24 @@
         />
 
 
+    <TextView
+        android:id="@+id/dictionary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
         android:text="Large Text"
         android:id="@+id/txtpronounce" />
@@ -46,20 +57,12 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
         android:id="@+id/txtvie" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/dictionary" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

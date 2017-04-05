@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
@@ -32,32 +32,32 @@
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\notification_template_big_media_narrow.xml"
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\77d5c38fa13e885a162b6411664af978971162fb\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
-        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\notification_template_lines.xml"
-    },
-    {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\notification_template_lines.xml"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
@@ -112,10 +112,6 @@
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\77d5c38fa13e885a162b6411664af978971162fb\\output\\res\\layout\\design_layout_snackbar.xml"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_dictionary.xml",
-        "source": "G:\\Android Projects\\Tudien\\app\\src\\main\\res\\layout\\content_dictionary.xml"
-    },
-    {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
@@ -124,16 +120,8 @@
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_main.xml",
-        "source": "G:\\Android Projects\\Tudien\\app\\src\\main\\res\\layout\\content_main.xml"
-    },
-    {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_dictionary.xml",
-        "source": "G:\\Android Projects\\Tudien\\app\\src\\main\\res\\layout\\activity_dictionary.xml"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
@@ -166,10 +154,6 @@
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "C:\\Users\\Hphuo\\.android\\build-cache\\0058f2463956a854382a3339c389934b313597ea\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "G:\\Android Projects\\Tudien\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "G:\\Android Projects\\Tudien\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",

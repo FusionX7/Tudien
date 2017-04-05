@@ -88,9 +88,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            if(learned==false)
-            learned=true;
-            else learned = false;
+            if(learned==false) {
+                learned = true;
+                item.setTitle("Quay lại");
+            }
+            else{
+                learned = false;
+                item.setTitle(R.string.action_settings);
+            }
             getLoaderManager().restartLoader(0,null,MainActivity.this);
             return learned;
         }
